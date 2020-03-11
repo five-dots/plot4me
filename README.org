@@ -1,0 +1,14 @@
+#+STARTUP: showall indent
+#+PROPERTY: header-args:R :results output :session *R:plot4me*
+
+* plot4me
+
+A collection of plot functions for me.
+
+** Installation
+
+=plot4me= is not available through CRAN. To install from github, use:
+
+#+begin_src R
+devtools::install_github("five-dots/plot4me")
+#+end_src

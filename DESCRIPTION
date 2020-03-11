@@ -1,0 +1,21 @@
+Package: plot4me
+Title: ggplot2 wrappers for me
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Shun",
+           family = "Asai",
+           role = c("aut", "cre"),
+           email = "syun.asai@gamil.com")
+Description: ggplot wrappers for me.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    ggplot2,
+    magrittr,
+    rlang,
+    stats,
+Suggests: 
+    testthat
+RoxygenNote: 7.0.2
