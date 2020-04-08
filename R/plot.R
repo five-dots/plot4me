@@ -82,7 +82,9 @@ disc_x_cont_y <- function(df, x_var, y_var, width = 0.25, violin = TRUE,
       alpha = 0.1, color = "black")
 
   if (mean)
-    p <- p + ggplot2::stat_summary(fun.y = base::mean, geom = "point",
+    ## p <- p + ggplot2::stat_summary(fun.y = base::mean, geom = "point",
+    ##                                color = "black", shape = 4, size = 5)
+    p <- p + ggplot2::stat_summary(fun = base::mean, geom = "point",
                                    color = "black", shape = 4, size = 5)
 
   p + theme_plot4me() + ggplot2::theme(legend.position = "none")
@@ -105,7 +107,7 @@ cont_x_cont_y <- function(df, x_var, y_var, point = TRUE, smooth = TRUE,
   if (!is.numeric(y))
     stop("y must be numeric.", call. = FALSE)
 
-  p <- ggplot2::ggplot(df, ggplot2::aes(x = !!x_var, y = !!y_var,))
+  p <- ggplot2::ggplot(df, ggplot2::aes(x = !!x_var, y = !!y_var))
 
   if (point)
     p <- p + ggplot2::geom_point(alpha = 0.2)
